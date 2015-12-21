@@ -1,0 +1,47 @@
+// Import custom styles.
+@import "_custom.scss";
+
+html, body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	//overflow: hidden;
+}
+
+#page{
+		
+	width: 100%;
+}
+
+
+// Console, style from slate theme.
+div.messages {
+  padding: 1em;
+  margin: 0;
+  color: #003366;
+  background: #bbddff;
+  border: 1px solid #aaccee;
+}
+
+div.warning {
+  color: #884400;
+  background: #ffee66;
+  border-color: #eedd55;
+}
+
+div.error {
+  color: white;
+  background: #ee6633;
+  border-color: #dd5522;
+}
+
+div.status {
+  color: #336600;
+  background: #ccff88;
+  border-color: #bbee77;
+}
+
+
+
+

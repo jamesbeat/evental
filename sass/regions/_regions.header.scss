@@ -1,0 +1,150 @@
+#header{
+	
+		
+	padding-top: $horizontal_padding;
+	padding-bottom: $horizontal_padding;
+	
+	background-color: $light_grey;
+	
+	.container{
+		position: relative;
+		@include display(flex); 
+		@include align-items(center);
+		
+		@include media($tablet) { @include justify-content(space-between); }
+	    @include media($mobile) { @include justify-content(space-between); }
+	}
+}
+
+
+#logo{
+	
+	
+	@include span-columns(2);
+		
+		
+		@include media($tablet) {
+		  @include span-columns(4);
+		 
+		}
+		
+		@include media($mobile) {
+		  @include span-columns(4);
+		 
+		}
+
+	
+}
+
+#name-and-slogan{
+	
+	@include span-columns(2);
+	
+	@include media($tablet) {
+	  @include span-columns(4);
+	  text-align: center;
+		 
+	}
+		
+	@include media($mobile) {
+	  @include span-columns(4);
+		text-align: center;	 
+	}
+	
+	
+	a{
+		font-size: 1rem;
+		text-transform: uppercase;
+		color: $link-color;
+		font-weight: normal;
+		font-family: $heading-font-family;
+		
+		&:hover{ 
+			text-decoration: none;
+			color: $hover-color;
+		}
+	}
+}
+
+#main_nav{
+	
+	@include span-columns(8);
+	@include omega;
+	
+	@include media($tablet) { display: none;}
+	@include media($mobile) { display: none; }
+	
+	ul#primary{
+		
+		list-style-type: none;
+		
+		li{
+			
+			display: inline;
+			
+			a{
+				text-transform: uppercase;
+				display: inline-block;
+				padding: 12px;
+				font-family: $heading-font-family;
+				font-weight: normal;
+				color: $link-color;
+				
+				&:hover{ 
+					color: $hover-color;
+					text-decoration: none;
+				}
+			}
+						
+			&.active-trail{
+				a{ color: $active-color; }
+			}
+			&.active{
+				a{ color: $active-color; }
+			}
+			
+		}
+		
+		
+	}
+}
+
+
+.nav-snap{
+	
+	display: none;
+	text-align: right;
+	
+	@include media($tablet) { 
+		display: block;
+		@include span-columns(4);
+	
+	}
+	@include media($mobile) {
+		display: block;
+		@include span-columns(4);
+		
+	}
+			
+				
+	a#snap_btn{
+		
+		color: $link-color;
+		
+		&.active{
+			color: $active-color;
+		}
+		
+		&:hover{
+			text-decoration: none;
+			color: $hover-color;
+		}	
+		
+		i{
+			font-size: 40px;
+			@extend %icon;
+			@extend %icon-menu;
+		}
+		
+	}
+}

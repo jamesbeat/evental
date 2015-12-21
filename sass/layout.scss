@@ -1,0 +1,77 @@
+@import "_config.scss";
+
+// Layout
+// ------
+// Using a negative margin technique, adapted from ZEN. The page is loaded by this order:
+
+// 1. Header
+// 2. Content
+// 3. Navigation menus
+// 4. Sidebar Left
+// 5. Sideabr Right
+
+// Layout rules. (Disclaimer: do not change if you're not sure you know what you're doing.)
+.container {
+  @include outer-container;
+  margin-left: auto;
+  margin-right: auto;
+  width: $max-width;
+  
+  padding-left: $page-padding;
+  padding-right: $page-padding;
+  border: 1px dotted $demo_color;
+  
+  // Collapse to fluid width once the browser width goes below current max width.
+  @if $responsive {
+    @include media($max-width-fluid) {
+      width: auto;
+    }
+  }
+}
+
+.row{
+	@include row(table);
+}
+
+
+#content {
+
+}
+
+#sidebar-first {
+
+}
+
+#sidebar-second {
+
+}
+
+#footer {
+  float: none;
+  clear: both;
+}
+
+// Layout Helpers
+#header,
+#footer,
+.mission,
+.breadcrumb,
+.node {
+  clear: both;
+}
+
+// Columns Inner
+// -------------
+// You can change the padding inside the columns without changing the
+// width of them by just usinbg the INNER div of each column
+.inner {
+  padding: 0;
+}
+
+// Navigation styles
+#navigation {
+  li {
+    list-style-type: none;
+    display: inline-block;
+  }
+}
